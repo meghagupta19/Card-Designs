@@ -1,0 +1,97 @@
+.card2{
+    margin: 20px;
+    width: 400px;
+    height: 350px;
+    
+    position: relative;
+    perspective: 1000px;
+}
+
+.wrapper{
+    width:250px ;
+    height: 250px;
+    margin: 15% auto;
+}
+
+.box-area{
+   
+    transform-style: preserve-3d;
+    transform-origin: 100px 100px 0;
+
+}
+
+.box-area:hover{
+    animation: animates 4s ease-in-out infinite;
+}
+
+.box-area div{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    line-height: 200px;
+}
+
+.box-area .back{
+    background-image: url(https://images.pexels.com/photos/2072165/pexels-photo-2072165.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+    background-size: cover;
+    background-position: center;
+    transform: translateZ(100px);
+
+}
+.box-area .left{
+    background-image: url(https://images.pexels.com/photos/4197559/pexels-photo-4197559.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(90deg) translateZ(100px);
+
+}
+.box-area .right{
+    background-image: url(https://images.pexels.com/photos/4041238/pexels-photo-4041238.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+
+}
+.box-area .top{
+    background-image: url(https://images.pexels.com/photos/905938/pexels-photo-905938.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+
+}
+.box-area .bottom{
+    background-image: url(https://images.pexels.com/photos/4219887/pexels-photo-4219887.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+
+}
+.box-area .front{
+    background-image: url(https://images.pexels.com/photos/2072181/pexels-photo-2072181.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+    background-size: cover;
+    background-position: center;
+    transform: rotateX(-90deg) translateZ(100px);
+
+}
+
+@keyframes animates{
+    from,to{
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    16%{
+        transform: rotateY(-90deg);
+    }
+    33%{
+        transform: rotateY(-90deg) rotateZ(90deg);
+    }
+    50%{
+        transform: rotateY(-180deg) rotateZ(90deg);
+    }
+    66%{
+        transform: rotateY(-270deg) rotateX(90deg);
+    }
+    83%{
+        transform: rotateX(90deg);
+    }
+}
+

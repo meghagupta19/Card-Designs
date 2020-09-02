@@ -1,0 +1,47 @@
+.card5{
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    
+}
+
+.slideshow{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+}
+
+.slideshow:hover{
+    animation: animated 5s linear infinite;
+}
+
+@keyframes animated{
+    0%{
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100%{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.slideshow span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*45deg)) translateZ(250px);
+    -webkit-box-reflect: below -50px linear-gradient(transparent,transparent,#000);
+}
+
+.slideshow span img{
+    position: absolute;
+    top: -30px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

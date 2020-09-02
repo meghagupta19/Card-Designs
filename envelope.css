@@ -1,0 +1,75 @@
+.card3{
+    position: absolute;
+    right: 0px;
+    top: 1160px;
+    transform: translate(-30%,-50%);
+}
+
+.envelope{
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: crimson;
+    box-shadow: 0 5px 10px 3px #000;
+
+}
+
+.envelope::before{
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: 0px;
+    border-right: 150px solid transparent;
+    border-left: 150px solid transparent;
+    border-top: 100px solid  crimson;
+    border-bottom: 100px solid  transparent;
+    transform-origin: top;
+    transform: rotateX(0deg);
+    z-index: 9;
+}
+
+.envelope::after{
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: 0px;
+    border-right: 150px solid crimson;
+    border-left: 150px solid  crimson;
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid  crimson;
+    z-index: 99;
+}
+
+.letter{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-image: url(https://images.pexels.com/photos/1111322/pexels-photo-1111322.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500); 
+    opacity: 0.8;
+    width: 300px;
+    height: 200px;
+    border-radius: 22px;
+    transition: .8s ease;
+    z-index: 8;
+
+}
+
+h3{
+    opacity: 1;
+    color: white;
+    text-align: center;
+}
+
+.card3:hover .envelope::before{
+    transform: rotateX(180deg);
+    transition: 1s ease;
+   
+}
+
+.card3:hover .letter{
+    top: -150px;
+    transition: 1s ease;
+    z-index: 10;
+}
+
+

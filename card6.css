@@ -1,0 +1,105 @@
+.card6{
+    border-radius: 10px;
+    width: 250px;
+    height: 300px;
+    background-color: #ffffff;
+    position: relative;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0px 20px 30px #000;
+    overflow: hidden;
+}
+
+.cover{
+    width: 100%;
+    height: 100px;
+    background-image: url(https://images.pexels.com/photos/3936206/pexels-photo-3936206.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+    background-position: center;
+    background-size: cover;
+
+}
+
+#image{
+    border-radius: 50%;
+    position: absolute;
+    width: 80px;
+    height: 120px;
+    bottom: 100px;
+    left: 30%;
+    box-shadow: 0px 0px 0px 10px #ffffff;
+
+
+}
+
+.content{
+    margin: 20px 0px;
+    padding: 0;
+    width: 100%;
+    height: calc(480px -160px);
+    padding: 80px 10px 10px 10px;
+    text-align: center;
+}
+
+.hidden-text{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    font-family: Comfortaa ,cursive;
+    transition: all 1s ease-in;
+    background-image: url(https://images.pexels.com/photos/4040651/pexels-photo-4040651.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+    font-size: 18px;
+    z-index: 98;
+    
+}
+
+.card6:hover .hidden-text{
+    top: 0;
+    opacity: 1;
+    transition-delay: 0.1s;
+    
+}
+
+.card6:hover::after{
+    transform: rotate(0deg);
+}
+
+.card6::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: rotate(135deg);
+    background-color: pink;
+    border-radius: 10px;
+    transform-origin: 260px 480px;
+    transition: all 1s ease;
+    z-index: 97;
+}
+
+.btn{
+    position: absolute;
+    
+    font-size: 50px;
+    z-index: 99;
+    right: 20px;
+    bottom: 20px;
+    opacity: 1;
+    transition: all 1s ease;
+}
+
+.card6:hover .btn{
+    bottom: -100px;
+}
+
+.icon{
+    font-size: 30px;
+    text-shadow: 10px 20px 10px 20px #000;
+}
